@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="static/index.css">
+</head>
+
+<style>
+	html{
+  height: 100%;
+}
+body{
+  /*text-align: center;*/
+}
+form{
+    display: inline-block;
+  	vertical-align: middle;
+  	-webkit-box-sizing: border-box;
+  	box-sizing: 25.000em;
+  	padding: .625em;
+  	background-color: #f5ecd9;
+  }
+  h1{
+    margin: 0;
+	  color: #e84d5b;
+	  border-bottom: .031em solid #e84d5b;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 19px 0;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+<body>	
+
+	<fieldset class="formContainer">
+	<div class="about-this-survey">
+			<h1>The information from this survey will be used to understand the spread and impacts of the infection. Your participation in this project is voluntary. If you prefer not to answer a question, you may skip that question. If you prefer not to complete the survey, you can disregard the survey. This research is being conducted by Kenya-National-Pandemic-Response.  All personal information will be kept strictly confidential. If you have any questions regarding this research project, please contact the bureau headquaters</h1>
+	</div>
+	<p>
+	<div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="age">Your Age</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="age" name="age" placeholder="Your Age..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="id">National ID/Passport</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="id" name="id" placeholder="Your ID/Passport..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="county">County</label>
+      </div>
+      <div class="col-75">
+        <select id="county" name="county">
+          <option value="1">Machakos</option>
+          <option value="2">Nairobi</option>
+          <option value="3">Mombasa</option>
+          <option value="4">Eldoret</option>
+          <option value="5">Kiambu</option>
+          <option value="6">Transzoia</option>
+          <option value="7">Kajiando</option>
+          <option value="8">Marsabit</option>
+          <option value="9">Turkana</option>
+          <option value="10">Siaya</option>
+          <option value="11">Busia</option>
+          <option value="12">Kisumu</option>
+          <option value="13">Kitui</option>
+          <option value="14">Makueni</option>
+          <option value="15">Limuru</option>
+          <option value="16">Lamu</option>
+          <option value="17">TransMara</option>
+          <option value="18">Marsabit</option>
+          <option value="19">Turkana</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">About you</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Please Describe yourself.." style="height:100px"></textarea>
+      </div>
+    </div>
+	</p>
+
+
+	<p>
+	<h2>Are you currently experiencing or have you previously experienced any of the following symptoms? Check all that apply:<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<p>
+				<input type="checkbox" name="WhatAreYouExperiencing" value="Loss of taste"/>
+				<label for="WhatAreYouExperiencing0">Loss of taste</label>
+			</p>
+
+			<p><input type="checkbox" name="WhatAreYouExperiencing" value="Loss of smell"/>
+				<label for="WhatAreYouExperiencing1">Loss of smell</label>
+			</p>
+
+			<p><input type="checkbox" name="WhatAreYouExperiencing" value="Shortness of breath" /><label for="WhatAreYouExperiencing">Shortness of breath</label></p>
+
+			<p><input type="checkbox"  name="WhatAreYouExperiencing" value="Cough"/>
+				<label for="WhatAreYouExperiencing">Cough</label>
+			</p>
+
+			<p><input type="checkbox"  name="WhatAreYouExperiencing" value="Fever" />
+				<label for="WhatAreYouExperiencing">Fever</label>
+			</p>
+		</p>
+
+			
+		
+	</div>
+	<div class="rsform-block rsform-block-whendidsymptomsstart">
+	<h2>When did you first start to experience these symptoms:<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div>
+				<input type="radio"  name="time" value="Today"/>
+				<label for="When">Today</label>
+
+				<input type="radio"  name="when" value="Less than 1 week ago" />
+				<label for="When">Less than 1 week ago</label>
+
+				<input type="radio"  name="time" value="1-2 weeks ago" />
+				<label for="When">1-2 weeks ago</label>
+
+				<input type="radio"  name="time" value="2-3 weeks ago" />
+				<label for="When">2-3 weeks ago</label>
+
+				<input type="radio"  name="time" value="3+ weeks ago" />
+				<label for="When">3+ weeks ago</label>
+			</div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	
+	<h2>Have you been in close contact with someone who has been exposed?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div>
+				<input type="radio"  name="form[HaveYouBeenInCloseContact]" value="YES" />
+				<label for="HaveYouBeenInCloseContact0">YES</label>
+				<input type="radio"  name="form[HaveYouBeenInCloseContact]" value="NO" />
+				<label for="HaveYouBeenInCloseContact1">NO</label>
+			</div>
+			<p class="formDescription"></p>
+		</div>
+	
+
+	
+	<h2>How do you travel locally in Kenya Check all that apply:<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div>
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Bike " />
+				<label for="HowDoYouTravelLocally0">Bike </label>
+
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Personal bicycle "/>
+				<label for="HowDoYouTravelLocally1">Personal bicycle </label>
+
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Private vehicle " />
+				<label for="HowDoYouTravelLocally2">Private vehicle </label>
+
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Public transit "/>
+				<label for="HowDoYouTravelLocally3">Public transit </label>
+
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Taxi/Uber/Lyft "/>
+				<label for="HowDoYouTravelLocally4">Taxi/Uber/Lyft </label>
+
+				<input type="checkbox"  name="form[HowDoYouTravelLocally][]" value="Other " /><label for="HowDoYouTravelLocally5">Other </label>
+			</div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	
+	<div class="formControlLabel">If you chose “other”, please specify:<strong class="formRequired">(*)</strong></div>
+		<div class="formControls">
+			<div class="formBody"><textarea cols="50" rows="5" name="form[OtherPleaseSpecify]" id="OtherPleaseSpecify" class="rsform-text-box"></textarea></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	
+	<h2>Were you hospitalized?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div>
+				<input type="radio"  name="form[WhereYouHospitalized]" value="YES"  />
+				<label for="WhereYouHospitalized0">YES</label>
+
+				<input type="radio"  name="form[WhereYouHospitalized]" value="NO"  />
+				<label for="WhereYouHospitalized1">NO</label>
+
+			</div>
+
+			<p class="formDescription"></p>
+		</div>
+	</div>
+
+	<div class="rsform-block rsform-block-ifyeswhereyouonaventilator">
+	<h2>If yes, were you on a ventilator?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div>
+				<input type="radio"  name="form[IfYesWhereYouOnAVentilator]" value="YES" />
+				<label for="IfYesWhereYouOnAVentilator0">YES</label>
+
+				<input type="radio"  name="form[IfYesWhereYouOnAVentilator]" value="NO" />
+				<label for="IfYesWhereYouOnAVentilator1">NO</label>
+			</div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-anychronicconditions">
+	<h2>Do you have any chronic medical conditions? Check all that apply:<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><input type="checkbox"  name="form[AnyChronicConditions][]" value="Diabetes" id="AnyChronicConditions0" class="rsform-checkbox" /><label for="AnyChronicConditions0">Diabetes</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="Asthma" id="AnyChronicConditions1" class="rsform-checkbox" /><label for="AnyChronicConditions1">Asthma</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="COPD" id="AnyChronicConditions2" class="rsform-checkbox" /><label for="AnyChronicConditions2">COPD</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="Hypertension" id="AnyChronicConditions3" class="rsform-checkbox" /><label for="AnyChronicConditions3">Hypertension</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="Coronary Artery Disease" id="AnyChronicConditions4" class="rsform-checkbox" /><label for="AnyChronicConditions4">Coronary Artery Disease</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="Heart Failure" id="AnyChronicConditions5" class="rsform-checkbox" /><label for="AnyChronicConditions5">Heart Failure</label><input type="checkbox"  name="form[AnyChronicConditions][]" value="Other" id="AnyChronicConditions6" class="rsform-checkbox" /><label for="AnyChronicConditions6">Other</label></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-ifyouchooseother">
+	<h2>If you chose “other”, please specify:<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><textarea cols="50" rows="5" name="form[IfYouChooseOther]" id="IfYouChooseOther" class="rsform-text-box"></textarea></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-howmanypeopleliveinyourhouse">
+	<h2>How many people live in the home including yourself?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><input type="text" value="" size="20" name="form[HowManyPeopleLiveInYourHouse]" id="HowManyPeopleLiveInYourHouse" class="rsform-input-box" /></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-anyoneelseexperiencingsymptomsathome">
+	<h2>Is anyone in the home experiencing any of the symptoms listed in Question 1?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><input type="checkbox"  name="form[AnyoneElseExperiencingSymptomsAtHome][]" value="YES" id="AnyoneElseExperiencingSymptomsAtHome0" class="rsform-checkbox" /><label for="AnyoneElseExperiencingSymptomsAtHome0">YES</label><input type="checkbox"  name="form[AnyoneElseExperiencingSymptomsAtHome][]" value="NO" id="AnyoneElseExperiencingSymptomsAtHome1" class="rsform-checkbox" /><label for="AnyoneElseExperiencingSymptomsAtHome1">NO</label></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-canwecontactthem">
+	<h2>If anyone in the home has symptoms, can we contact them for a nurse evaluation and possible testing?<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><input type="checkbox"  name="form[CanWeContactThem][]" value="YES" id="CanWeContactThem0" class="rsform-checkbox" /><label for="CanWeContactThem0">YES</label><input type="checkbox"  name="form[CanWeContactThem][]" value="NO" id="CanWeContactThem1" class="rsform-checkbox" /><label for="CanWeContactThem1">NO</label></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	<div class="rsform-block rsform-block-howdowecontactthem">
+	<h2>What is the best way to contact these individuals for a nurse evaluation? Please provide any phone numbers or e-mails where we can reach out<strong class="formRequired">(*)</strong></h2>
+		<div class="formControls">
+			<div class="formBody"><textarea cols="50" rows="5" name="form[HowDoWeContactThem]" id="HowDoWeContactThem" class="rsform-text-box"></textarea><span class="formValidation"></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+	
+			<div class="formBody"><button type="submit" name="form[Submit]" id="Submit" class="rsform-submit-button" >Submit</button><span class="formValidation"></span></div>
+			<p class="formDescription"></p>
+		</div>
+	</div>
+</fieldset>
+</body>
+</html
